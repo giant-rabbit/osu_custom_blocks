@@ -1,0 +1,123 @@
+.block--type-call-out-grid {
+
+  &.m-1 {
+    margin: 0 !important;
+  }
+  &.p-1 {
+    padding: 0 !important;
+  }
+
+  .block__content {
+    height: 165vw;
+    @include breakpoint($mobile-medium) {
+      height: 80vw;
+    }
+    @include breakpoint(800px) {
+      height: auto;
+    }
+  }
+
+  .call-out-grid-background {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @include breakpoint(800px) {
+      flex-direction: row;
+    }
+  }
+  .call-out-grid-title-wrapper {
+    padding: 60px 30px;
+    background-color: $color-black-transparent;
+    @include breakpoint(800px) {
+      display: flex;
+      height: 450px;
+      padding: 0px 30px;
+      align-items: center;
+      flex: 1;
+    }
+    @include breakpoint($tablet) {
+      height: 600px;
+    }
+  }
+  .call-out-grid-wrapper {
+    flex: 2;
+  }
+
+  .field--name-field-call-out-grid-background {
+    position: relative;
+    img {
+      position: absolute;
+      height: 165vw;
+      object-fit: cover;
+      z-index: -1;
+      @include breakpoint($mobile-medium) {
+        height: 80vw;
+      }
+      @include breakpoint(800px) {
+        height: 450px;
+      }
+      @include breakpoint($tablet) {
+        height: 600px;
+      }
+    }
+  }
+
+  .field--name-field-call-out-grid-title {
+    @include heading-medium;
+    color: $color-white;
+    text-align: center;
+  }
+
+  .field--name-field-call-out-facts {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+    @include breakpoint($mobile-medium) {
+      column-gap: calc(100% / 3);
+      justify-content: center;
+    }
+
+    > .field__item {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint($mobile-medium) {
+        width: calc(100% / 3);
+      }
+
+      &:nth-child(1) {
+        margin-right: 50%;
+        background-color: $color-blue-medium;
+        @include breakpoint($mobile-medium) {
+          margin-right: 0px;
+        }
+      }
+      &:nth-child(2) {
+        margin-left: 50%;
+        background-color: $color-blue-dark;
+        @include breakpoint($mobile-medium) {
+          margin-left: 0px;
+        }
+      }
+      &:nth-child(3) {
+        background-color: $color-red;
+      }
+    }
+  }
+
+  .paragraph--type--call-out-fact {
+    color: $color-white;
+    text-align: center;
+  }
+
+  .field--name-field-call-out-grid-stat {
+    @include call-out-large;
+  }
+
+  .field--name-field-call-out-grid-context {
+    @include body-large;
+  }
+}

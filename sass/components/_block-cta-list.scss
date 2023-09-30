@@ -1,0 +1,71 @@
+.block--type-cta-list-with-image {
+  &.m-1 {
+    margin: 0 !important;
+  }
+  &.p-1 {
+    padding: 0 !important;
+  }
+
+  .block__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    @include breakpoint($mobile-medium) {
+      flex-direction: row;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+  .cta-list-left-column,
+  .cta-list-right-column {
+    @include breakpoint($mobile-medium) {
+      width: 50%;
+    }
+  }
+  .cta-list-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 60px;
+    @include breakpoint($mobile-medium) {
+      padding-bottom: 0px;
+    }
+  }
+
+  .field--name-field-cta-list-title {
+    @include heading-small;
+    width: 100%;
+    max-width: 630px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: auto;
+    color: $color-red;
+    @include breakpoint($mobile-medium) {
+      padding-right: 50px;
+    }
+    @include breakpoint($mobile-large) {
+      padding-right: 100px;
+    }
+  }
+  .field--name-field-cta-list-link {
+    width: 100%;
+    max-width: 630px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: auto;
+    a {
+      @include cta-large;
+      display: block;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $color-tan;
+    }
+
+    @include breakpoint($mobile-medium) {
+      padding-right: 50px;
+    }
+    @include breakpoint($mobile-large) {
+      padding-right: 100px;
+    }
+  }
+}
