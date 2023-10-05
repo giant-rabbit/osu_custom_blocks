@@ -1,10 +1,5 @@
 .block--type-cta-list-with-image {
-  &.m-1 {
-    margin: 0 !important;
-  }
-  &.p-1 {
-    padding: 0 !important;
-  }
+  @include theme-overrides;
 
   .block__content {
     display: flex;

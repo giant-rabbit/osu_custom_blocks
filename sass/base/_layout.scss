@@ -7,7 +7,16 @@
     margin-bottom: 0px !important;
   }
 
-.mt-1 {
+  .mt-1 {
     margin-top: 0px !important;
+  }
+}
+
+@mixin theme-overrides {
+  &.m-1 {
+    margin: 0 !important;
+  }
+  &.p-1 {
+    padding: 0 !important;
   }
 }

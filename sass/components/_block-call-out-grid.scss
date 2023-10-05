@@ -1,18 +1,12 @@
 .block--type-call-out-grid {
-
-  &.m-1 {
-    margin: 0 !important;
-  }
-  &.p-1 {
-    padding: 0 !important;
-  }
+  @include theme-overrides;
 
   .block__content {
     height: 165vw;
     @include breakpoint($mobile-medium) {
       height: 80vw;
     }
-    @include breakpoint(800px) {
+    @include breakpoint($mobile-medium-large) {
       height: auto;
     }
   }
@@ -21,14 +15,14 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    @include breakpoint(800px) {
+    @include breakpoint($mobile-medium-large) {
       flex-direction: row;
     }
   }
   .call-out-grid-title-wrapper {
     padding: 60px 30px;
     background-color: $color-black-transparent;
-    @include breakpoint(800px) {
+    @include breakpoint($mobile-medium-large) {
       display: flex;
       height: 450px;
       padding: 0px 30px;
@@ -53,7 +47,7 @@
       @include breakpoint($mobile-medium) {
         height: 80vw;
       }
-      @include breakpoint(800px) {
+      @include breakpoint($mobile-medium-large) {
         height: 450px;
       }
       @include breakpoint($tablet) {

@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.myModule = {
+  Drupal.behaviors.addCustomBlocksBodyClass = {
     attach: function (context, settings) {
       let classesToCheck = [
         '.block--type-call-out-grid',

@@ -1,12 +1,6 @@
 .block--type-student-story {
+  @include theme-overrides;
   background-color: $color-blue-dark;
-
-  &.m-1 {
-    margin: 0 !important;
-  }
-  &.p-1 {
-    padding: 0 !important;
-  }
 
   .block__content {
     max-width: $content-width;

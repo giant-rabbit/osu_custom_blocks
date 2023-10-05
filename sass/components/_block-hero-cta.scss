@@ -1,12 +1,6 @@
 .block--type-hero-with-cta {
+  @include theme-overrides;
   background-color: $color-gray;
-
-  &.m-1 {
-    margin: 0 !important;
-  }
-  &.p-1 {
-    padding: 0 !important;
-  }
 
   .hero-cta-hero-wrapper {
     position: relative;
