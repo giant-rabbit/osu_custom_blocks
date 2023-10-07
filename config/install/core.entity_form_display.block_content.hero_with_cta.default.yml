@@ -1,0 +1,63 @@
+uuid: bc670941-cd37-4dd7-976d-8cafd55a43a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_with_cta
+    - field.field.block_content.hero_with_cta.field_hero_cta_banner_text
+    - field.field.block_content.hero_with_cta.field_hero_cta_button
+    - field.field.block_content.hero_with_cta.field_hero_cta_image
+    - field.field.block_content.hero_with_cta.field_hero_cta_subtitle
+    - field.field.block_content.hero_with_cta.field_hero_cta_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+id: block_content.hero_with_cta.default
+targetEntityType: block_content
+bundle: hero_with_cta
+mode: default
+content:
+  field_hero_cta_banner_text:
+    type: text_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_cta_button:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_hero_cta_image:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_hero_cta_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_cta_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  info: true
