@@ -145,11 +145,11 @@
   &.block--view-mode-floating-right {
     .block__content {
       margin: 0px auto;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      margin-top: 60px;
+      margin-bottom: 60px;
       @include breakpoint($mobile-large) {
-        padding-top: 120px;
-        padding-bottom: 120px;
+        margin-top: 120px;
+        margin-bottom: 120px;
       }
     }
 
