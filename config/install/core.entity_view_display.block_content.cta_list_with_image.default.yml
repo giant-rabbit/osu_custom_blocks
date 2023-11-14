@@ -9,8 +9,7 @@ dependencies:
     - field.field.block_content.cta_list_with_image.field_cta_list_title
   module:
     - field_group
-    - image
-    - link
+    - linkit
 third_party_settings:
   field_group:
     group_left_column:
@@ -58,18 +57,16 @@ bundle: cta_list_with_image
 mode: default
 content:
   field_cta_list_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 4
+      view_mode: full
+      link: false
+    third_party_settings: { }
+    weight: 5
     region: content
   field_cta_list_link:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -77,7 +74,8 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+      linkit_profile: default
+    third_party_settings: { }
     weight: 2
     region: content
   field_cta_list_title:
@@ -85,7 +83,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 1
     region: content
-hidden: {  }
+hidden: { }

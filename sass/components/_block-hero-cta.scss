@@ -1,42 +1,45 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
 .block--type-hero-with-cta {
-  @include theme-overrides;
   background-color: $color-gray;
 
   .hero-cta-hero-wrapper {
-    position: relative;
     box-sizing: content-box;
     margin: 0 auto;
     max-width: $hero-inner-width;
+    position: relative;
     @include breakpoint($mobile-medium) {
-      display: block;
-      padding: 40px;
-      background-image: url('../images/plus-signs-4-rows.svg');
+      background-image: url("../images/plus-signs-4-rows.svg");
       background-position: 40px 50px;
       background-repeat: no-repeat;
+      display: block;
+      padding: 40px;
     }
     @include breakpoint($tablet) {
-      background-image: url('../images/plus-signs-4-rows.svg'), url('../images/plus-signs-5-rows.svg');
+      background-image: url("../images/plus-signs-4-rows.svg"), url("../images/plus-signs-5-rows.svg");
       background-position: 0 70px, 90% 75%;
       background-repeat: no-repeat;
     }
   }
+
   .hero-cta-title-wrapper {
-    position: absolute;
+    background: $color-black-transparent;
+    color: $color-white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    top: 0;
     height: 100%;
-    background: $color-black-transparent;
+    justify-content: center;
     padding: 30px;
-    color: $color-white;
+    position: absolute;
+    top: 0;
     @include breakpoint($mobile-medium) {
-      position: relative;
-      max-width: 520px;
+      background-color: $color-osu-orange;
+      clip-path: polygon(calc(100% - 80px) 0, 100% 105px, 100% 100%, 0 100%, 0 0);
       margin-top: -50px;
+      max-width: 520px;
       padding: 52px 46px;
-      background-color: $color-red;
-      clip-path: polygon(calc(100% - 80px) 0,100% 105px,100% 100%,0 100%,0 0);
+      position: relative;
     }
     @include breakpoint(650px) {
       margin-top: -100px;
@@ -48,15 +51,16 @@
       max-width: 683px;
     }
   }
+
   .hero-cta-banner-wrapper {
-    padding: 30px;
-    display: flex;
-    gap: 30px;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     background-color: $color-blue-light;
-    color: $color-black;
+    color: $color-paddletail-black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px;
     @include breakpoint($mobile-medium) {
       padding: 15px 20px;
     }
@@ -70,17 +74,21 @@
       margin-left: 360px;
     }
   }
+
   .field--name-field-hero-cta-title {
     @include heading-large;
     margin-bottom: 10px;
     text-transform: uppercase;
   }
+
   .field--name-field-hero-cta-subtitle {
     @include heading-tiny;
   }
+
   .field--name-field-hero-cta-banner-text {
     font-size: 1rem;
     line-height: 1.5;
+
     span.call-out {
       font-family: $stratum;
       font-size: 1.125rem;
@@ -89,14 +97,16 @@
       text-transform: uppercase;
     }
   }
+
   .field--name-field-hero-cta-button a {
-    display: block;
-    padding: 15px 60px;
-    background-color: $color-red;
+    background-color: $color-osu-orange;
     color: $color-white;
+    display: block;
     font-size: 1rem;
     font-weight: 600;
     line-height: 10px;
+    padding: 15px 60px;
+
     &:hover {
       background-color: $color-gray;
     }
