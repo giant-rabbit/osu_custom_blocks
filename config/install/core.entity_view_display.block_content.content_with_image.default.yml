@@ -9,7 +9,7 @@ dependencies:
     - field.field.block_content.content_with_image.field_content_with_image_image
     - field.field.block_content.content_with_image.field_content_with_image_title
   module:
-    - link
+    - linkit
     - text
 id: block_content.content_with_image.default
 targetEntityType: block_content
@@ -24,7 +24,7 @@ content:
     weight: 1
     region: content
   field_content_with_image_cta:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -32,6 +32,7 @@ content:
       url_plain: false
       rel: ''
       target: ''
+      linkit_profile: default
     third_party_settings: { }
     weight: 2
     region: content

@@ -10,7 +10,7 @@ dependencies:
     - field.field.block_content.hero_with_cta.field_hero_cta_subtitle
     - field.field.block_content.hero_with_cta.field_hero_cta_title
   module:
-    - link
+    - linkit
     - media_library
     - text
 id: block_content.hero_with_cta.default
@@ -27,12 +27,14 @@ content:
       placeholder: ''
     third_party_settings: { }
   field_hero_cta_button:
-    type: link_default
+    type: linkit
     weight: 5
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      linkit_profile: default
+      linkit_auto_link_text: false
     third_party_settings: { }
   field_hero_cta_image:
     type: media_library_widget

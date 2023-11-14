@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - block_content.type.cta_list_with_image
+    - field.field.block_content.cta_list_with_image.field_cta_list_image
     - field.field.block_content.cta_list_with_image.field_cta_list_link
     - field.field.block_content.cta_list_with_image.field_cta_list_title
-    - field.field.block_content.cta_list_with_image.field_cta_list_image
   module:
     - field_group
-    - link
+    - linkit
 third_party_settings:
   field_group:
     group_left_column:
@@ -56,8 +56,17 @@ targetEntityType: block_content
 bundle: cta_list_with_image
 mode: default
 content:
+  field_cta_list_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: { }
+    weight: 5
+    region: content
   field_cta_list_link:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -65,7 +74,8 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+      linkit_profile: default
+    third_party_settings: { }
     weight: 2
     region: content
   field_cta_list_title:
@@ -73,16 +83,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 1
     region: content
-  field_cta_list_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: full
-      link: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
-hidden: {  }
+hidden: { }

@@ -9,7 +9,7 @@ dependencies:
     - field.field.block_content.content_with_image.field_content_with_image_image
     - field.field.block_content.content_with_image.field_content_with_image_title
   module:
-    - link
+    - linkit
     - media_library
     - text
 id: block_content.content_with_image.default
@@ -26,12 +26,14 @@ content:
       placeholder: ''
     third_party_settings: { }
   field_content_with_image_cta:
-    type: link_default
+    type: linkit
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      linkit_profile: default
+      linkit_auto_link_text: false
     third_party_settings: { }
   field_content_with_image_image:
     type: media_library_widget

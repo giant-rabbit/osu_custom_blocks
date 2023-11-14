@@ -11,7 +11,7 @@ dependencies:
     - field.field.block_content.hero_with_cta.field_hero_cta_title
   module:
     - field_group
-    - link
+    - linkit
     - text
 third_party_settings:
   field_group:
@@ -88,7 +88,7 @@ content:
     weight: 6
     region: content
   field_hero_cta_button:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -96,6 +96,7 @@ content:
       url_plain: false
       rel: ''
       target: ''
+      linkit_profile: default
     third_party_settings: { }
     weight: 7
     region: content
