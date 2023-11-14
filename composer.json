@@ -1,5 +1,5 @@
 {
-    "name": "osu-wams/osu_block_types",
+    "name": "osu-wams/osu_custom_blocks",
     "description": "OSU Drupal Module to create block types for use in OSU Drupal.",
     "type": "drupal-custom-module",
     "license": "GPL-2.0-or-later",
