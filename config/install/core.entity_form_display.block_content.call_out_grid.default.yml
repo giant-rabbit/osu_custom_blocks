@@ -7,9 +7,8 @@ dependencies:
     - field.field.block_content.call_out_grid.field_call_out_facts
     - field.field.block_content.call_out_grid.field_call_out_grid_background
     - field.field.block_content.call_out_grid.field_call_out_grid_title
-    - image.style.thumbnail
   module:
-    - image
+    - media_library
     - paragraphs
 id: block_content.call_out_grid.default
 targetEntityType: block_content
@@ -35,12 +34,11 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_call_out_grid_background:
-    type: image_image
+    type: media_library_widget
     weight: 1
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_call_out_grid_title:
     type: string_textfield
