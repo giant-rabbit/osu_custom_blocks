@@ -9,8 +9,7 @@ dependencies:
     - field.field.block_content.content_with_image.field_content_with_image_image
     - field.field.block_content.content_with_image.field_content_with_image_title
   module:
-    - image
-    - link
+    - linkit
     - text
 id: block_content.content_with_image.default
 targetEntityType: block_content
@@ -19,40 +18,39 @@ mode: default
 content:
   field_content_with_image_content:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
+    label: hidden
+    settings: { }
+    third_party_settings: { }
     weight: 1
     region: content
   field_content_with_image_cta:
-    type: link
-    label: above
+    type: linkit
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+      linkit_profile: default
+    third_party_settings: { }
     weight: 2
     region: content
   field_content_with_image_image:
-    type: image
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 3
+      view_mode: full
+      link: false
+    third_party_settings: { }
+    weight: 4
     region: content
   field_content_with_image_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 0
     region: content
-hidden: {  }
+hidden: { }

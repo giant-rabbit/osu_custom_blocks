@@ -10,7 +10,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_group
-    - image
 third_party_settings:
   field_group:
     group_call_out_background:
@@ -86,13 +85,11 @@ content:
     weight: 22
     region: content
   field_call_out_grid_background:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: full
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

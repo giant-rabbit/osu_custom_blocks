@@ -11,8 +11,7 @@ dependencies:
     - field.field.block_content.hero_with_cta.field_hero_cta_title
   module:
     - field_group
-    - image
-    - link
+    - linkit
     - text
 third_party_settings:
   field_group:
@@ -84,12 +83,12 @@ content:
   field_hero_cta_banner_text:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: { }
+    third_party_settings: { }
     weight: 6
     region: content
   field_hero_cta_button:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -97,26 +96,25 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+      linkit_profile: default
+    third_party_settings: { }
     weight: 7
     region: content
   field_hero_cta_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 1
+      view_mode: full
+      link: false
+    third_party_settings: { }
+    weight: 2
     region: content
   field_hero_cta_subtitle:
     type: string
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 4
     region: content
   field_hero_cta_title:
@@ -124,7 +122,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 2
     region: content
-hidden: {  }
+hidden: { }

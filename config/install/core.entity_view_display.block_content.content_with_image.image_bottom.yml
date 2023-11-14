@@ -11,9 +11,8 @@ dependencies:
     - field.field.block_content.content_with_image.field_content_with_image_title
   module:
     - field_group
-    - image
     - layout_builder
-    - link
+    - linkit
     - text
 third_party_settings:
   layout_builder:
@@ -48,12 +47,12 @@ content:
   field_content_with_image_content:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: { }
+    third_party_settings: { }
     weight: 2
     region: content
   field_content_with_image_cta:
-    type: link
+    type: linkit
     label: hidden
     settings:
       trim_length: 80
@@ -61,26 +60,25 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+      linkit_profile: default
+    third_party_settings: { }
     weight: 3
     region: content
   field_content_with_image_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 4
+      view_mode: full
+      link: true
+    third_party_settings: { }
+    weight: 3
     region: content
   field_content_with_image_title:
     type: string
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: { }
     weight: 0
     region: content
-hidden: {  }
+hidden: { }

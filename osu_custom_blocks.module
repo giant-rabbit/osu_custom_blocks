@@ -5,8 +5,6 @@
  * Primary module hooks for OSU Custom Blocks module.
  */
 
-use Drupal\block\Entity\Block;
-
 /**
  * Implements hook_page_attachments().
  */

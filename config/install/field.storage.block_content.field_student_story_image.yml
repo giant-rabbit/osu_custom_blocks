@@ -1,27 +1,17 @@
-uuid: 9c69a257-5e99-4b62-ab2e-ffd046e62f69
+uuid: b6faa946-7a45-462a-85d6-71b8b48d9279
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - file
-    - image
+    - media
 id: block_content.field_student_story_image
 field_name: field_student_story_image
 entity_type: block_content
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

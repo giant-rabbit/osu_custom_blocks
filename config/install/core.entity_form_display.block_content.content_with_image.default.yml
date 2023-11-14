@@ -8,10 +8,9 @@ dependencies:
     - field.field.block_content.content_with_image.field_content_with_image_cta
     - field.field.block_content.content_with_image.field_content_with_image_image
     - field.field.block_content.content_with_image.field_content_with_image_title
-    - image.style.thumbnail
   module:
-    - image
-    - link
+    - linkit
+    - media_library
     - text
 id: block_content.content_with_image.default
 targetEntityType: block_content
@@ -20,28 +19,29 @@ mode: default
 content:
   field_content_with_image_content:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: { }
   field_content_with_image_cta:
-    type: link_default
-    weight: 3
+    type: linkit
+    weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+      linkit_profile: default
+      linkit_auto_link_text: false
+    third_party_settings: { }
   field_content_with_image_image:
-    type: image_image
+    type: media_library_widget
     weight: 1
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
+      media_types: { }
+    third_party_settings: { }
   field_content_with_image_title:
     type: string_textfield
     weight: 0
@@ -49,6 +49,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: { }
 hidden:
   info: true

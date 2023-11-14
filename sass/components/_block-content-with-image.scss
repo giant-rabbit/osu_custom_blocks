@@ -1,5 +1,7 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
 .block--type-content-with-image {
-  @include theme-overrides;
 
   .field--name-field-content-with-image-title {
     @include heading-small;
@@ -16,7 +18,7 @@
     a {
       @include cta-small;
       padding-right: 27px;
-      color: $color-red;
+      color: $color-osu-orange;
       background-size: 17px;
     }
   }
@@ -73,7 +75,7 @@
       }
     }
     .field--name-field-content-with-image-title {
-      color: $color-red;
+      color: $color-osu-orange;
     }
   }
 
@@ -110,7 +112,7 @@
   &.block--view-mode-image-bottom {
     .block__content {
       flex-wrap: wrap;
-      gap: 0px;
+      gap: 0;
       @include breakpoint($mobile-medium) {
         gap: 30px;
       }
@@ -129,14 +131,14 @@
     .field--name-field-content-with-image-cta {
       margin-bottom: 30px;
       @include breakpoint($mobile-medium) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
 
     .field--name-field-content-with-image-image {
       margin-left: 20px;
       &:before {
-        background-color: $color-orange;
+        background-color: $color-gold;
         left: -20px;
       }
     }
